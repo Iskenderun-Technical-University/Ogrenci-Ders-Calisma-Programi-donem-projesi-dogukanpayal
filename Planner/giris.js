@@ -12,11 +12,22 @@ var myArray = ["Bugün yapacaklarınız, yarının belirlenmesindeki en önemli 
   var x = Math.floor(Math.random() * 10);
 
   document.getElementById("motivasyonSozu").innerHTML = '"'+myArray[x]+'"';
-  const registerLogin=document.getElementById("registerLogin")
-    function closeRegisterLogin()
-    {
-        registerLogin.classList.add("kapali");
+
+  function kayitOlPopUp() {
+    var kayitOlFormu = document.getElementById("kayit-ol-formu");
+    kayitOlFormu.style.display = "flex";
+  }
+
+  function kayitOlPopUpKapat() {
+    var kayitOlFormu = document.getElementById("kayit-ol-formu");
+    kayitOlFormu.style.display = "none";
+  }
+  
+  window.onclick = function(event) {
+    var kayitOlFormu = document.getElementById("kayit-ol-formu");
+    if (event.target == kayitOlFormu) {
+      kayitOlPopUpKapat();
     }
-    
+  }
 
 

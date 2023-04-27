@@ -10,7 +10,7 @@
     <!-- Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,900;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;900&family=Montserrat:ital,wght@0,100;0,400;0,500;0,900;1,900&display=swap" rel="stylesheet">
     <!-- Animasyon -->
     <link
     rel="stylesheet"
@@ -18,33 +18,55 @@
   />
 </head>
 <body>
+    <!-- İlk Görünen Karşılama Ekranı -->
     <div class="welcoming-paragraph">
         <p class="merhaba animate__animated animate__fadeInDown">Merhaba</p>
         <p id="motivasyonSozu" class="animate__animated animate__fadeIn"></p>
         <div class="buttons">
-            <button class="kayit animate__animated animate__slideInLeft">Kayıt Ol</button>
+            <button class="kayit animate__animated animate__slideInLeft" onclick="kayitOlPopUp()">Kayıt Ol</button>
             <button class="giris animate__animated animate__slideInRight">Giriş Yap</button>
         </div>
     </div>
-    <div class="register-login " id="registerLogin">
-        <div class="register">
-            <button onclick="closeRegisterLogin()"> asdasdasdas</button>
-            <label for="register-username">Kullanıcı Adı</label>
-            <input type="text" id="register-username">
-            <label for="register-mail">E-Mail</label>
-            <input type="email" id="register-mail">
-            <label for="register-password1">Password</label>
-            <input type="password" id="register-password1">
-            <label for="register-password2">Password</label>
-            <input type="password" id="register-password2">
+    <!-- Kayıt ve Giriş Ekranı Genel Kutusu-->
+    <div class="register-login-screen animate__animated animate__fadeIn" id="kayit-ol-formu">
+        <!-- Kayıt Ekranı -->
+        <div class="register-screen animate__animated animate__fadeInDown">
+            <p>Kayıt ol</p>
+            <div class="label-input-box">
+                <label for="register-username">Kullanıcı Adı</label>
+                <div class="input-box">
+                    <input type="text" id="register-username">
+                </div>
+            </div>
+            <div class="label-input-box">
+                <label for="register-email">E-Mail</label>
+                <div class="input-box">
+                    <input type="email" id="register-email">
+                </div>
+            </div>
+            <div class="label-input-box">
+                <label for="register-password1">Şifre</label>
+                <div class="input-box">
+                    <input type="password" id="register-password1">
+                </div>
+            </div>
+            <div class="label-input-box">
+                <label for="register-password2">Şifre</label>
+                <div class="input-box">
+                    <input type="password" id="register-password2">
+                </div>
+            </div>
+            <div class="register-button">
+                <button onclick="">Kayıt Ol</button>
+            </div>
         </div>
+        <!-- Giriş Ekranı -->
         <div>
 
         </div>
+
     </div>
     
-
-
 
     <script src="giris.js"></script>
 </body>
