@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color: whitesmoke;
+}
+body{
+    background-color: #363945;
+}
+.welcoming-paragraph{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: all .3s;
+}
+.welcoming-paragraph p{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.welcoming-paragraph .merhaba{
+    font-size: 10rem;
+    font-weight: 900;
+}
+.welcoming-paragraph #motivasyonSozu{
+    font-size: 2rem;
+    font-weight: 100;
+    color: rgb(172, 172, 172);
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.buttons button{
+    color:black;
+    padding: 10px 20px;
+    margin-top: 200px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.5rem;
+    transition: all .3s;
+}
+.buttons .kayit{
+    background-color: #0072B5;
+    color: white;
+    border: 1px solid #0072B5;
+}
+.buttons .giris{
+    background-color: transparent;
+    color: #0072B5
+}
+.buttons .kayit:hover{
+    background-color: white;
+    color: #0072B5;
+}
+.buttons .giris:hover{
+    color:white;
+}
+.register-login{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100vw;
+    height:100vh;
+    background-color: #00000060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.register-login .register{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    border: 2px solid #0072B5;
+    padding: 50px;
+}
+.register-login .register input{
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 60px;
+    color: black;
+}
+.kapali{
+    display: none !important;
+}
