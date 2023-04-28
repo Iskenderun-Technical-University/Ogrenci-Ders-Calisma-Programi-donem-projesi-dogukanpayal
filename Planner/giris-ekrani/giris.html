@@ -23,14 +23,14 @@
         <p class="merhaba animate__animated animate__fadeInDown">Merhaba</p>
         <p id="motivasyonSozu" class="animate__animated animate__fadeIn"></p>
         <div class="buttons">
-            <button class="kayit animate__animated animate__slideInLeft" onclick="kayitOlPopUp()">Kayıt Ol</button>
-            <button class="giris animate__animated animate__slideInRight">Giriş Yap</button>
+            <button class="kayit animate__animated animate__slideInLeft" onclick="kayitOlBackgroundPopUp() , kayitOlPopUp()">Kayıt Ol</button>
+            <button class="giris animate__animated animate__slideInRight" onclick="kayitOlBackgroundPopUp() , girisYapPopUp()">Giriş Yap</button>
         </div>
     </div>
     <!-- Kayıt ve Giriş Ekranı Genel Kutusu-->
-    <div class="register-login-screen animate__animated animate__fadeIn" id="kayit-ol-formu">
+    <div class="register-login-screen animate__animated animate__fadeIn" id="kayit-ol-background-formu">
         <!-- Kayıt Ekranı -->
-        <div class="register-screen animate__animated animate__fadeInDown">
+        <div class="register-screen animate__animated animate__fadeInDown" id="kayit-ol-formu">
             <p>Kayıt ol</p>
             <div class="label-input-box">
                 <label for="register-username">Kullanıcı Adı</label>
@@ -61,8 +61,24 @@
             </div>
         </div>
         <!-- Giriş Ekranı -->
-        <div>
+        <div class="login-screen animate__animated animate__fadeInDown" id="giris-yap-formu">
+            <p> Giris Yap </p>
+            <div class="label-input-box">
+                <label for="login-username">Kullanıcı Adı</label>
+                <div class="input-box">
+                    <input type="text" id="login-username">
+                </div>
+            </div>
+            <div class="label-input-box">
+                <label for="login-password">Şifre</label>
+                <div class="input-box">
+                    <input type="password" id="login-password">
+                </div>
+            </div>
+            <div class="login-button">
+                <button onclick="">Giris Yap</button>
 
+            </div>
         </div>
 
     </div>

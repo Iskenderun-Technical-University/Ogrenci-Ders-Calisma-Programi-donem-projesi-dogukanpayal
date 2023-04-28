@@ -58,6 +58,8 @@ body{
 .buttons .giris:hover{
     color:white;
 }
+
+/* Kayit Olma Ekranı*/
 .register-login-screen{
     position: absolute;
     top: 0px;
@@ -126,6 +128,66 @@ body{
     border-radius: 20px;
 }
 .register-login-screen .register-screen button:hover{
+    background-color: white;
+    color: #A72002;
+    transition: all .5s;
+}
+
+/* Giriş Yapma Ekranı */
+
+.register-login-screen .login-screen{
+    display: flex;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 75px;
+    padding-right: 75px ;
+    background-color: #0e072b;
+    border: 2px solid #7c1700;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    border-radius: 30px;
+    display: none;
+}
+.register-login-screen .login-screen p {
+    text-align: center;
+    font-size: 80px;
+    padding-bottom:50px;
+    font-weight: 900px;
+    text-decoration: underline;
+}
+.register-login-screen .login-screen .label-input-box{
+    padding-bottom: 30px;
+}
+.register-login-screen .login-screen label{
+    font-size: 20px;
+}
+.register-login-screen .login-screen .input-box{
+    display: flex;
+    border: 2px solid #7c1700;
+    background-color: #A72002;
+    border-radius: 30px;
+    padding:10px;
+}
+.register-login-screen .login-screen input{
+    padding: 1px;
+    color: whitesmoke;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 20px;
+    outline: none;
+}
+.register-login-screen .login-screen .login-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register-login-screen .login-screen button{
+    background-color: #A72002;
+    border: 1px solid #7c1700;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+}.register-login-screen .login-screen button:hover{
     background-color: white;
     color: #A72002;
     transition: all .5s;
