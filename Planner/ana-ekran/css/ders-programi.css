@@ -1,0 +1,274 @@
+.syllabus-main-box{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+
+
+.syllabus-outside-box{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.syllabus-outside-box .heading-columns-box{
+    border: 3px solid #360018;
+    background-color: #1f0025ef;
+    border-radius: 30px;
+    display: flex;
+    margin:10px;
+    height: 70%;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(212, 210, 210);
+    font-family: 'Inter', sans-serif;
+}
+.syllabus-outside-box .heading-columns-box .heading-box{
+    border: 3px solid #360018;
+    background-color: #1d000d;
+    border-radius: 30px;
+    display: flex;
+    padding: 1px;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    height: 8%;
+    justify-content: center;
+    align-items: center;
+}
+.syllabus-outside-box .columns-box{
+    background-color: #1d000d;
+    width: 95%;
+    height: 80%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+}
+.syllabus-outside-box .day{
+    background-color: #1d000d;
+    height: 90%;
+    width: 14%;
+    margin: 10px;
+    word-wrap: break-word;
+}
+.syllabus-outside-box .heading-box h2{
+    font-weight: 500;
+}
+.syllabus-outside-box .day-heading-box{
+    background-color: #140009;
+    border: 3px solid #360018;
+    border-radius: 10px;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+}
+.syllabus-outside-box .day-items-box{
+    background-color: #140009;
+    border: 3px solid #360018;
+    border-radius: 10px;
+    height: 98%;
+}
+.syllabus-outside-box .day-button-box{
+    border: 3px solid #360018;
+    background-color: #1d000d;
+    height: 7%;
+    text-align: center;
+    width: 10%;
+    border-radius: 12px;
+    
+}
+.syllabus-outside-box .day-button-box button{
+    color: rgb(212, 210, 210);
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* input box form */
+
+.input-background-form{
+    border-radius: 30px;
+    background-color: #1f00259f;
+    display: flex;
+    margin:10px;
+    height: 70%;
+    width: 70%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    color: rgb(212, 210, 210);
+
+}
+.input-background-form .input-form{
+    border-radius: 30px;
+    background-color: #1d000d;
+    border: 1px solid #30002c;
+    width: 50%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input-background-form .heading-box{
+    background-color: #140009;
+    border: 2px solid #360018;
+    border-radius: 10px;
+    width: 40%;
+    margin: 10px;
+}
+.input-background-form .input-box{
+    background-color: #140009;
+    border: 1px solid #360018;
+    border-radius: 10px;
+    width: 40%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-background-form .input-button-box{
+    border: 3px solid #360018;
+    background-color: #1d000d;
+    height: 10%;
+    width: 10%;
+    border-radius: 12px;
+    margin: 10px;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-background-form .input-button-box button{
+    color: rgb(212, 210, 210);
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 13px;
+}
+.input-background-form .input-form input{
+    color: rgb(212, 210, 210);
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+.input-background-form .day-selector-box{
+    border-radius: 30px;
+    background-color: #1d000d;
+    border: 1px solid #30002c;
+    margin: 10px;
+    height: 20%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+.input-background-form .day-selector-heading-box{
+    background-color: #140009;
+    border: 3px solid #360018;
+    border-radius: 10px;
+    height: 30%;
+    width: 50%;
+    text-align: center;
+}
+
+.input-background-form .day-selector-button-box-form{
+    background-color: #140009;
+    border: 1px solid #360018;
+    border-radius: 10px;
+    width: 90%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.input-background-form .day-selector-button-box-form .button-box{
+    
+    width: 13%;
+    margin: 4px;
+    height: 50%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #360018;
+    background-color: #1d000d;
+    border-radius: 10px;
+    padding: 1px;
+
+}
+
+.input-background-form .day-selector-button-box-form .button-box button{
+    color: rgb(212, 210, 210);
+    width: 13%;
+    margin: 4px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+/* Ekstra Özellikler */
+
+
+ul li{
+    list-style:none;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+
+}
+
+
+ul li::before{
+    content: "•";
+    border-radius: 50%;
+    background-image: url();
+}
+ul li span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: inherit;
+    float: right;
+    color: #555;
+    font-size: 20px;
+    height: 20px;
+}
+
+ul li span:hover{
+    background:#555;
+    color: #edeef0;
+    border-radius: 25%;
+    height: 17px;
+}

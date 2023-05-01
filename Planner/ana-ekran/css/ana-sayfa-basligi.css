@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("https://images.hdqwalls.com/wallpapers/purple-nebula-haze-stars-4k-r6.jpg");
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+    background-color: #4400530e;
+}
+
+/* Ana Sayfa Başlığı */
+
+.ana-sayfa-heading-box{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.ana-sayfa-heading-box .heading-box{
+  width: 80%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ana-sayfa-heading-box .heading-box h1{
+  font-size: 150px;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.ana-sayfa-heading-box .username-box{
+  height: 30%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.username-box h3 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+
+ 

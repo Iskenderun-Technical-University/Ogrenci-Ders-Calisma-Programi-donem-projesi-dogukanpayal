@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merhaba</title>
-    <link rel="stylesheet" href="ana-ekran.css">
+    <link rel="stylesheet" href="css/ana-sayfa-basligi.css">
+    <link rel="stylesheet" href="css/takvim.css">
+    <link rel="stylesheet" href="css/ders-programi.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;900&family=Montserrat:ital,wght@0,100;0,400;0,500;0,900;1,900&display=swap" rel="stylesheet">
@@ -23,93 +25,203 @@
     </div>
 
   <!-- Takvim -->
-  <div class="calendar-heading-background">
-    <div class="heading-box">
-      <h3> Takvim </h3>
 
+  <!-- Ders Programı -->
+<div class="syllabus-main-box">
+  <div class="syllabus-outside-box">
+    <div class="heading-columns-box">
+        <div class="heading-box">
+            <h2> Ders Programı </h2>
+        </div>
+        <div class="columns-box">
+            <!-- Pazartesi -->
+            <div class="day">
+                <div class="day-heading-box">
+                    <h3>Pzt</h3>
+                </div>
+                <div class="day-items-box">
+                    <ul id="pazartesi-item-container">
+                        <!--
+                        <li>Ders 1</li>
+                        <li>Ders 2</li>
+                        <li>Ders 3</li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+            <!-- Salı -->
+            <div class="day">
+                <div class="day-heading-box">
+                    <h3>Sal</h3>
+                </div>
+                <div class="day-items-box">
+                    <ul id="sali-item-container">
+                        <!--
+                        <li>Ders 1</li>
+                        <li>Ders 2</li>
+                        <li>Ders 3</li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+            <!-- Çarşamba -->
+            <div class="day">
+                <div class="day-heading-box">
+                    <h3>Çar</h3>
+                </div>
+                <div class="day-items-box">
+                    <ul id="carsamba-item-container">
+                        <!--
+                        <li>Ders 1</li>
+                        <li>Ders 2</li>
+                        <li>Ders 3</li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+            <!-- Perşembe -->
+            <div class="day">
+                <div class="day-heading-box">
+                    <h3>Per</h3>
+                </div>
+                <div class="day-items-box">
+                    <ul id="persembe-item-container">
+                        <!--
+                        <li>Ders 1</li>
+                        <li>Ders 2</li>
+                        <li>Ders 3</li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+            <!-- Cuma -->
+            <div class="day">
+                <div class="day-heading-box">
+                    <h3>Cum</h3>
+                </div>
+                <div class="day-items-box">
+                    <ul id="cuma-item-container">
+                        <!--
+                        <li>Ders 1</li>
+                        <li>Ders 2</li>
+                        <li>Ders 3</li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+            <!-- Cumartesi -->
+            <div class="day">
+                <div class="day-heading-box">
+                    <h3>Cmt</h3>
+                </div>
+                <div class="day-items-box">
+                    <ul id="cumartesi-item-container">
+                        <!--
+                        <li>Ders 1</li>
+                        <li>Ders 2</li>
+                        <li>Ders 3</li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+            <!-- Pazar -->
+            <div class="day">
+                <div class="day-heading-box">
+                    <h3>Pzr</h3>
+                </div>
+                <div class="day-items-box">
+                    <ul id="pazar-item-container">
+                        <!--
+                        <li>Ders 1</li>
+                        <li>Ders 2</li>
+                        <li>Ders 3</li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="day-button-box">
+            <button onclick="inputBackgroundFormPopUp()"> Ekle </button>
+        </div>
     </div>
-    <div class="calendar-background">
-      <div class="dummy-box">
 
-      </div>
-        <div class="container">
-            <div class="left">
-              <div class="calendar">
-                <div class="month">
-                  <i class="fas fa-angle-left prev"></i>
-                  <div class="date">aralik 2015</div>
-                  <i class="fas fa-angle-right next"></i>
-                </div>
-                <div class="weekdays">
-                  <div>Pzr</div>
-                  <div>Pzt</div>
-                  <div>Sal</div>
-                  <div>Çar</div>
-                  <div>Per</div>
-                  <div>Cum</div>
-                  <div>Cmt</div>
-                </div>
-                <div class="days"></div>
-                <div class="goto-today">
-                  <div class="goto">
-                    <input type="text" placeholder="mm/yyyy" class="date-input" />
-                    <button class="goto-btn">Git</button>
-                  </div>
-                  <button class="today-btn">Bugün</button>
-                </div>
-              </div>
-            </div>
-            <div class="right">
-              <div class="today-date">
-                <div class="event-day">Per</div>
-                <div class="event-date">12 aralik 2022</div>
-              </div>
-              <div class="events"></div>
-              <div class="add-event-wrapper">
-                <div class="add-event-header">
-                  <div class="title">Ekle</div>
-                  <i class="fas fa-times close"></i>
-                </div>
-                <div class="add-event-body">
-                  <div class="add-event-input">
-                    <input type="text" placeholder="Etkinlik İsmi" class="event-name" />
-                  </div>
-                  <div class="add-event-input">
-                    <input
-                      type="text"
-                      placeholder="Etkinlik Zamanı"
-                      class="event-time-from"
-                    />
-                  </div>
-                  <div class="add-event-input">
-                    <input
-                      type="text"
-                      placeholder="Etkinlik Zamanı"
-                      class="event-time-to"
-                    />
-                  </div>
-                </div>
-                <div class="add-event-footer">
-                  <button class="add-event-btn">Ekle</button>
-                </div>
-              </div>
-            </div>
-            <button class="add-event">
-              <i class="fas fa-plus"></i>
-            </button>
+</div>
+<!-- Input Form -->
+<div class="input-background-form" id="input-background-formu">
+    <div class="input-form">
+        <div class="heading-box">
+            <h2>Dersinizi Ekleyin</h2>
+        </div>
+        <div class="input-box">
+            <input type="text" id="input-box">
+        </div>
+        <div class="input-button-box">
+            <button onclick="daySelectorFormPopUp()">Ekle</button>
+        </div>
+    </div>
+    <div class="day-selector-box" id="day-selector-background-formu">
+        <div class="day-selector-heading-box">
+            <h3>Gün Seçiniz</h3>
+        </div>
+        <div class="day-selector-button-box-form">
+          <div class="button-box">
+            <button onclick="addTaskPazartesi()">Pzt</button>
           </div>
+          <div class="button-box">
+            <button onclick="addTaskSali()">Sal</button>
+          </div>
+          <div class="button-box">            
+            <button onclick="addTaskCarsamba()">Çar</button>
+          </div>
+          <div class="button-box">
+            <button onclick="addTaskPersembe()">Per</button>
+          </div>
+          <div class="button-box">
+            <button onclick="addTaskCuma()">Cum</button>
+          </div>
+          <div class="button-box">
+            <button onclick="addTaskCumartesi()">Cmt</button>
+          </div>
+          <div class="button-box">
+            <button onclick="addTaskPazar()">Pzr</button>
+          </div>
+
+        </div>
     </div>
-
-    <!-- Ders Programı -->
-
-
+</div>
+</div>
 
 
 
 
 
 
-  </div>
-    <script src="ana-ekran.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Hedefler -->
+
+  <!-- Diğer Sayfa İçin Button -->
+    <script src="javascript/ana-ekran.js"></script>
+    <script src="javascript/ders-programi.js"></script>
 </body>
 </html>
