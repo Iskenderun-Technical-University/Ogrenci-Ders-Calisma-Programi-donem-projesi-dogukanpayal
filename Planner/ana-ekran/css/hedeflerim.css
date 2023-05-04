@@ -1,0 +1,143 @@
+.goals-background-form{
+    border: 2px solid red;
+    display: flex;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 100vw;
+    height: 40vh;
+}
+
+.goals-form{
+    border: 2px solid green;
+    display: flex;
+    margin:10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.goals-form .heading-box{
+    border: 2px solid yellow;
+    display: flex;
+    padding: 1px;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.goals-form .columns-box{
+    border: 2px solid hotpink;
+    width: 95%;
+    height: 80%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.goals-button-box{
+    border: 1px solid darkturquoise;
+    height: 10%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.goals-column-box{
+    border: 1px solid blue;
+    height: 90%;
+    width: 33%;
+    margin: 10px;
+    word-wrap: break-word;
+
+}
+.goals-column-heading-box{
+    border: 1px solid darkgoldenrod;
+    height: 10%;
+    text-align: center;
+    text-decoration: underline;
+}
+button{
+    color: black;
+}
+.goals-item-box{
+    border: 1px solid darkmagenta;
+    height: 90%;
+}
+
+/* input box form */
+
+.input-background-form{
+    background-color: rgba(0, 255, 255, 0.281);
+    display: flex;
+    height: 40vh;
+    width: 100vw;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+.input-form{
+    border: 1px solid red;
+    width: 50%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.heading-box{
+    border: 1px solid yellow;
+    margin: 10px;
+}
+.input-box{
+    border: 1px solid green;
+    padding: 10px;
+}
+.button-box{
+    border: 1px solid hotpink;
+    padding: 10px;
+}
+.button-box button{
+    color:black
+}
+.input-form input{
+    color: black;
+}
+.goal-selector-box{
+    border: 1px solid deeppink;
+    height: 20%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+.goal-selector-heading-box{
+    border: 1px solid gold;
+    height: 30%;
+    width: 50%;
+    text-align: center;
+}
+
+.goal-selector-button-box-form{
+    border: 1px solid red;
+    width: 90%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.goal-selector-button-box-form button{
+    color: black;
+    width: 13%;
+    margin: 4px;
+}

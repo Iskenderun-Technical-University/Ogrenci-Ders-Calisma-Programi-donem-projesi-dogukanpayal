@@ -27,6 +27,7 @@ window.onclick = function(event)
     if (event.target == inputBackgroundFormu) {
         inputBackgroundFormPopUpKapat();
         daySelectorFormPopUpKapat();
+        goalSelectorFormPopUpKapat();
       }
 }
 

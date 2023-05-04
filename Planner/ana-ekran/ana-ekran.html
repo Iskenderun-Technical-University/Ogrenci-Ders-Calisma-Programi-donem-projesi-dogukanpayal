@@ -7,6 +7,7 @@
     <title>Merhaba</title>
     <link rel="stylesheet" href="css/ana-sayfa-basligi.css">
     <link rel="stylesheet" href="css/takvim.css">
+    <link rel="stylesheet" href="css/hedeflerim.css">
     <link rel="stylesheet" href="css/ders-programi.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -194,34 +195,121 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- Hedefler -->
+  <div class="goals-background-form">
+    <div class="goals-form">
+        <div class="heading-box">
+            <h2>Hedeflerim</h2>
+        </div>
+        <div class="columns-box">
+            <div class="goals-column-box">
+                <!-- Haftalik -->
+                <div class="goals-column-heading-box">
+                    <h3>Haftalık</h3>
+                </div>
+                <div class="goals-item-box">
+                    <ul id="haftalik-item-container">
+                        <!--
+                        <li>Hedef 1</li>
+                        <li>Hedef 2</li>
+                        <li>Hedef 3</li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+            <div class="goals-column-box">
+                <!-- Aylık -->
+                <div class="goals-column-heading-box">
+                    <h3>Aylık</h3>
+                </div>
+                <div class="goals-item-box">
+                    <ul id="aylik-item-container">
+                        <!--
+                        <li>Hedef 1</li>
+                        <li>Hedef 2</li>
+                        <li>Hedef 3</li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+            <div class="goals-column-box">
+                <!-- Yıllık -->
+                <div class="goals-column-heading-box">
+                    <h3>Yıllık</h3>
+                </div>
+                <div class="goals-item-box">
+                    <ul id="yillik-item-container">
+                        <!--
+                        <li>Hedef 1</li>
+                        <li>Hedef 2</li>
+                        <li>Hedef 3</li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+                
+            </div>
+            <div class="goals-button-box">
+                <button onclick="inputBackgroundFormPopUp()">Ekle</button>
+            </div>
+        </div>
+    </div>
+    <!-- Input Form -->
+    <div class="input-background-form" id="goals-input-background-formu">
+        <div class="input-form">
+            <div class="heading-box">
+                <h2>Dersinizi Ekleyin</h2>
+            </div>
+            <div class="input-box">
+                <input type="text" id="goal-input-box">
+            </div>
+            <div class="button-box">
+                <button onclick="goalSelectorFormPopUp()">Ekle</button>
+            </div>
+        </div>
+        <div class="goal-selector-box" id="goal-selector-background-formu">
+            <div class="goal-selector-heading-box">
+                <h3>Gün Seçiniz</h3>
+            </div>
+            <div class="goal-selector-button-box-form">
+                <button onclick="addTaskHaftalik()">Haftalık</button>
+                <button onclick="addTaskAylik()">Aylık</button>
+                <button onclick="addTaskYillik()">Yıllık</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--  -->
+
+
 
   <!-- Diğer Sayfa İçin Button -->
+
+  <!-- -->
     <script src="javascript/ana-ekran.js"></script>
     <script src="javascript/ders-programi.js"></script>
+    <script src="javascript/hedeflerim.js"></script>
 </body>
 </html>
