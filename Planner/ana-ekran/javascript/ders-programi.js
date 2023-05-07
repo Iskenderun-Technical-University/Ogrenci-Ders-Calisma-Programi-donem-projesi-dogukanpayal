@@ -24,11 +24,16 @@ function daySelectorFormPopUpKapat(){
 window.onclick = function(event)
 {
     var inputBackgroundFormu = document.getElementById("input-background-formu");
-    if (event.target == inputBackgroundFormu) {
-        inputBackgroundFormPopUpKapat();
-        daySelectorFormPopUpKapat();
-        goalSelectorFormPopUpKapat();
-      }
+    var goalInputBackgroundFormu = document.getElementById("goals-input-background-formu");
+        if (event.target == inputBackgroundFormu) {
+            inputBackgroundFormPopUpKapat();
+            daySelectorFormPopUpKapat();
+        }
+    
+      if (event.target == goalInputBackgroundFormu) {
+          goalInputBackgroundFormPopUpKapat();
+          goalSelectorFormPopUpKapat();
+        }
 }
 
 // item ekleme //

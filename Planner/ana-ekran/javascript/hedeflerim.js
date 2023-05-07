@@ -1,10 +1,10 @@
 //input background //
-function inputBackgroundFormPopUp()
+function goalInputBackgroundFormPopUp()
 {
     var inputBackgroundFormu = document.getElementById("goals-input-background-formu");
     inputBackgroundFormu.style.display = "flex";
 }
-function inputBackgroundFormPopUpKapat()
+function goalInputBackgroundFormPopUpKapat()
 {
     var inputBackgroundFormu = document.getElementById("goals-input-background-formu");
     inputBackgroundFormu.style.display = "none";

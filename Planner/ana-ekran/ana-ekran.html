@@ -22,7 +22,6 @@
       <div class="username-box">
         <h3> Kullanıcı adi</h3>
       </div>
-
     </div>
 
   <!-- Takvim -->
@@ -196,18 +195,19 @@
 
 
   <!-- Hedefler -->
-  <div class="goals-background-form">
-    <div class="goals-form">
+<div class="goals-main-box">
+  <div class="goals-outside-box">
+    <div class="heading-columns-box">
         <div class="heading-box">
             <h2>Hedeflerim</h2>
         </div>
         <div class="columns-box">
-            <div class="goals-column-box">
-                <!-- Haftalik -->
-                <div class="goals-column-heading-box">
+            <!-- Haftalik -->
+            <div class="goal">
+                <div class="goal-heading-box">
                     <h3>Haftalık</h3>
                 </div>
-                <div class="goals-item-box">
+                <div class="goal-item-box">
                     <ul id="haftalik-item-container">
                         <!--
                         <li>Hedef 1</li>
@@ -217,12 +217,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="goals-column-box">
-                <!-- Aylık -->
-                <div class="goals-column-heading-box">
+            <!-- Aylık -->
+            <div class="goal">
+                <div class="goal-heading-box">
                     <h3>Aylık</h3>
                 </div>
-                <div class="goals-item-box">
+                <div class="goal-item-box">
                     <ul id="aylik-item-container">
                         <!--
                         <li>Hedef 1</li>
@@ -232,12 +232,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="goals-column-box">
-                <!-- Yıllık -->
-                <div class="goals-column-heading-box">
+            <!-- Yıllık -->
+            <div class="goal">
+                <div class="goal-heading-box">
                     <h3>Yıllık</h3>
                 </div>
-                <div class="goals-item-box">
+                <div class="goal-item-box">
                     <ul id="yillik-item-container">
                         <!--
                         <li>Hedef 1</li>
@@ -246,16 +246,16 @@
                         -->
                     </ul>
                 </div>
+            </div>    
             </div>
-                
-            </div>
-            <div class="goals-button-box">
-                <button onclick="inputBackgroundFormPopUp()">Ekle</button>
+            <div class="goal-button-box">
+                <button onclick="goalInputBackgroundFormPopUp()">Ekle</button>
             </div>
         </div>
     </div>
+
     <!-- Input Form -->
-    <div class="input-background-form" id="goals-input-background-formu">
+    <div class="goal-input-background-form" id="goals-input-background-formu">
         <div class="input-form">
             <div class="heading-box">
                 <h2>Dersinizi Ekleyin</h2>
@@ -263,7 +263,7 @@
             <div class="input-box">
                 <input type="text" id="goal-input-box">
             </div>
-            <div class="button-box">
+            <div class="input-button-box">
                 <button onclick="goalSelectorFormPopUp()">Ekle</button>
             </div>
         </div>
@@ -272,13 +272,18 @@
                 <h3>Gün Seçiniz</h3>
             </div>
             <div class="goal-selector-button-box-form">
-                <button onclick="addTaskHaftalik()">Haftalık</button>
-                <button onclick="addTaskAylik()">Aylık</button>
-                <button onclick="addTaskYillik()">Yıllık</button>
+                <div class="button-box">
+                    <button onclick="addTaskHaftalik()">Haftalık</button>
+                </div>
+                <div class="button-box">
+                    <button onclick="addTaskAylik()">Aylık</button>
+                </div>
+                <div class="button-box">
+                    <button onclick="addTaskYillik()">Yıllık</button>
+                </div>
             </div>
         </div>
     </div>
-
 </div>
 
 

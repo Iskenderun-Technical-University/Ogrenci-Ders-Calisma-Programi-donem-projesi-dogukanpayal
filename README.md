@@ -17,4 +17,20 @@
     * Whitenoise için medya oynatıcı
     * Pomodoro zamanı içinde yapılacaklar listesi
 
-<!-- Buraya Veritabanı Tabloları Gelicek -->
+
+## Projemde Kullanacağım Veri Tabanı Tabloları
+
+**:Bu projemde veri tabanı olarak firebase kullanacağım.**
+
+* Veri Tabloları:
+    * Kayıt olan kullanıcıların tutulduğu bir tablo.
+
+    * Kullanıcıların ders programlarını tutan bir tablo.
+
+    * Kullanıcıların yıllık , aylık , haftalık hedeflerini tutan bir tablo.
+
+    * Kullanıcıların son calıştıkları zamandaki yaptıkları ilerlemeleri görmeleri için bir tablo.
+
+    * Kullanıcıların çalışma kaynaklarının linklerini tutan bir tablo.
+
+    * Kullanıcıların notlarını kaydetmeyi sağlayan bir tablo.
