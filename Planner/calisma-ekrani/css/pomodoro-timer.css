@@ -1,0 +1,227 @@
+.pomodoro-todo-outside-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.pomodoro-outside-box{
+    width: 100%;
+    height: 600px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.pomodoro-inside-box{
+    border: 3px solid #360018;
+    background-color: #1f0025ef;
+    height: 550px;
+    width: 900px;
+    padding: 7px;
+}
+
+.pomodoro-timer-heading-button-box{
+    height: 100%;
+}
+
+.pomodoro-heading-box{
+    border: 3px solid #360018;
+    background-color: #1d000d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    color: white;
+}
+
+.pomodoro-clock-box{
+    border: 3px solid #360018;
+    background-color: #1d000d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    font-size: 100px;
+    margin-top: 10px;
+}
+
+.pomodoro-buttons-box{
+    border: 3px solid #360018;
+    background-color: #1d000d;
+    display: flex;
+    height: 25%; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
+.pomodoro-settings-box{
+    width: 90%;
+    height: 40%;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pomodoro-set-buttons-box{
+    width: 90%;
+    display: flex;
+    height: 35%;
+    margin-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pomodoro-actions-box{
+    width: 90%;
+    height: 30%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pomodoro-button{
+    border: 3px solid #360018;
+    background-color: #1d000d;
+    height: 70%;
+    width: 20%;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pomodoro-buttons-box button{
+    color: rgb(212, 210, 210);
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.pomodoro-button input{
+    color: rgb(212, 210, 210);
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+/* input form */
+
+.pomodoro-settings-input-form{
+    border-radius: 10px;
+    background-color: #1f00259f;
+    display: flex;
+    margin:10px;
+    height: 550px;
+    width: 550px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(212, 210, 210);
+    display: none;
+
+}
+.timer-form{
+    border-radius: 30px;
+    background-color: #1d000d;
+    border: 1px solid #30002c;
+    width: 50%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.timer-form-heading{
+    background-color: #140009;
+    border: 2px solid #360018;
+    border-radius: 10px;
+    width: 50%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+}
+
+.pomodoro-label-input-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 20px;
+    width: 50%;
+    height: 50%;
+    margin: 0px;
+}
+
+.pomodoro-label-box{
+    background-color: #140009;
+    border: 1px solid #360018;
+    border-radius: 5px;
+    width: 70%;
+    margin-bottom: 5px;
+    font-size: small;
+}
+
+.pomodoro-input-box{
+    background-color: #140009;
+    border: 1px solid #360018;
+    border-radius: 5px;
+    width: 75%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pomodoro-input-box input{
+    color: rgb(212, 210, 210);
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.settings-pomodoro-button{
+    border: 3px solid #360018;
+    background-color: #1d000d;
+    height: 10%;
+    width: 30%;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-pomodoro-button input{
+    color: rgb(212, 210, 210);
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid transparent;
+}

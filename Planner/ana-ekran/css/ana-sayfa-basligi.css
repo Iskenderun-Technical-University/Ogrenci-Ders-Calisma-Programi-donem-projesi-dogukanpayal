@@ -11,6 +11,12 @@ body{
     background-color: #4400530e;
 }
 
+.body-background{
+  height: 100%;
+  width: 100%;
+  background-color: #40004e07;
+}
+
 /* Ana Sayfa Başlığı */
 
 .ana-sayfa-heading-box{

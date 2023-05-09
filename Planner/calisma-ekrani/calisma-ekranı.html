@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calisma-ekrani.css">
+    <link rel="stylesheet" href="css/pomodoro-timer.css">
+    <link rel="stylesheet" href="css/to-do.css">
+    <title>Çalışma Ekranı</title>
+</head>
+<body>
+<div class="body-background">
+
+
+    <!-- Heading Kısmı -->
+    <div class="calisma-ekrani-heading-outside-box">
+        <div class="calisma-ekrani-heading-box">
+            <h2> Calışma Ekranı</h2>
+        </div>
+    </div>
+
+    <!-- Pomodoro Kısmı -->
+    <div class="pomodoro-todo-outside-box">
+        <div class="pomodoro-outside-box">
+            <div class="pomodoro-inside-box">
+                <div class="pomodoro-timer-heading-button-box">
+                <div class="pomodoro-heading-box">
+                    <h1>Pomodoro Timer</h1>
+                </div>
+                <div class="pomodoro-timer-box">
+                    <div class="pomodoro-clock-box">
+                        <div class="timer-display">25:00</div>
+                    </div>    
+                </div>
+                <div class="pomodoro-buttons-box">
+                    <div class="pomodoro-settings-box">
+                        <div class="pomodoro-button">
+                            <button id="settings-form" onclick="pomodoroInputBackgroundFormPopUp()"> Ayarla </button>
+                        </div>
+                    </div>
+                    <div class="pomodoro-set-buttons-box">
+                        <div class="pomodoro-button">
+                            <button id="pomodoro-button">Pomodoro</button>
+                        </div>
+                        <div class="pomodoro-button">
+                            <button id="short-break-button">Kısa Mola</button>
+                        </div>
+                        <div class="pomodoro-button">
+                            <button id="long-break-button">Uzun Mola</button>
+                        </div>
+                    </div>
+                    <div class="pomodoro-actions-box">
+                        <div class="pomodoro-button">
+                            <button id="start-button">Başlat</button>
+                        </div>
+                        <div class="pomodoro-button">
+                            <button id="pause-button">Durdur</button>
+                        </div>
+                        <div class="pomodoro-button">
+                            <button id="reset-button">Sıfırla</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+            <div class="pomodoro-settings-input-form" id="pomodoro-input-background-formu">
+                <form class="timer-form">
+                    <div class="timer-form-heading">
+                        <h1>Ayarlar</h1>
+                    </div>
+                    <div class="pomodoro-label-input-box">
+                        <div class="pomodoro-label-box">
+                            <label for="pomodoro-time">Pomodoro Süresi:</label>
+                        </div>
+                        <div class="pomodoro-input-box">
+                            <input type="number" id="pomodoro-time" value="25" min="1" max="60" required>
+                        </div>
+                    </div>
+                    <div class="pomodoro-label-input-box">
+                        <div class="pomodoro-label-box">
+                            <label for="short-break-time">Kısa Mola Süresi:</label>
+                        </div>
+                        <div class="pomodoro-input-box">
+                            <input type="number" id="short-break-time" value="5" min="1" max="60" required>
+                        </div>
+                    </div>
+                    <div class="pomodoro-label-input-box">
+                        <div class="pomodoro-label-box">
+                            <label for="long-break-time">Uzun Mola Süresi:</label>
+                        </div>
+                        <div class="pomodoro-input-box">
+                            <input type="number" id="long-break-time" value="15" min="1" max="60" required>
+                        </div>
+                    </div>
+                    <div class="settings-pomodoro-button">
+                        <input type="submit" value="Uygula">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <!-- To-do Listesi -->
+        <div class="to-do-main-box">
+            <div class="to-do-outside-box">
+            <div class="to-do-heading-column-box">
+                <div class="to-do-heading-box">
+                    <h2> Yapılacaklar </h2>
+                </div>
+                <div class="to-do-column-box">
+                    <div class="to-do-inside-column">
+                        <div class="to-do-items-box">
+                            <ul id="todo-item-container">
+                                <!--
+                                <li>İtem 1</li>
+                                <li>İtem 2</li>
+                                <li>İtem 3</li>
+                                -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="to-do-button-box">
+                    <button onclick="todoInputBackgroundFormPopUp()"> Ekle </button>
+                </div>
+            </div>
+            </div>
+            <div class="to-do-input-background-form" id="todo-input-background-formu">
+            <div class="to-do-input-form">
+                <div class="to-do-heading-box">
+                    <h2> Görevinizi Ekleyin </h2>
+                </div>
+                <div class="to-do-input-box">
+                    <input type="text" id="todo-input-box">
+                </div>
+                <div class="to-do-input-button-box">
+                    <button onclick="todoAddTask()">Ekle</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+<script src="js/pomodoro-timer.js"></script>
+<script src="js/to-do.js"></script>
+</body>
+</html>
