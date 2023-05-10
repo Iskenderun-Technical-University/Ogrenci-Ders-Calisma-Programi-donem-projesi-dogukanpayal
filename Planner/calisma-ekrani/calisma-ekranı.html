@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/calisma-ekrani.css">
     <link rel="stylesheet" href="css/pomodoro-timer.css">
     <link rel="stylesheet" href="css/to-do.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="css/notes.css">
     <title>Çalışma Ekranı</title>
 </head>
 <body>
@@ -102,9 +104,59 @@
             </div>
         </div>
 
-        <!-- To-do Listesi -->
+        <!-- Hesap Makinesi - to-do - Notlar Kısmı-->
+        
+
         <div class="to-do-main-box">
             <div class="to-do-outside-box">
+                <!-- Hesap Makinesi Kısmı -->
+                <div class="calculator-outside-box">
+                    <div class="calculator-down-button-box" id="calculator-down-button-form">
+                        <button onclick="calculatorFormPopUpKapat()"> - </button>
+                    </div>
+                    <div class="calculator-up-button-box" id="calculator-up-button-form">
+                        <button onclick="calculatorFormPopUp()"> ^ </button>
+                    </div>
+                    <div class="calculator-heading-box">
+                        <p> Hesap Makinesi </p>
+                    </div>
+
+                    <div class="calculator-inside-box" id="calculator-form">
+                        <input type="text" class="result" id="result" readonly>
+                    <div class="calculator-row-box">
+                        <div class="row">
+                            <button class="button" onclick="clearResult()">C</button>
+                            <button class="button" onclick="backspace()"><</button>
+                            <button class="button" onclick="insert('%')">%</button>
+                            <button class="button" onclick="insert('/')">/</button>
+                        </div>
+                        <div class="row">
+                            <button class="button" onclick="insert('7')">7</button>
+                            <button class="button" onclick="insert('8')">8</button>
+                            <button class="button" onclick="insert('9')">9</button>
+                            <button class="button" onclick="insert('*')">*</button>
+                        </div>
+                        <div class="row">
+                            <button class="button" onclick="insert('4')">4</button>
+                            <button class="button" onclick="insert('5')">5</button>
+                            <button class="button" onclick="insert('6')">6</button>
+                            <button class="button" onclick="insert('-')">-</button>
+                        </div>
+                        <div class="row">
+                            <button class="button" onclick="insert('1')">1</button>
+                            <button class="button" onclick="insert('2')">2</button>
+                            <button class="button" onclick="insert('3')">3</button>
+                            <button class="button" onclick="insert('+')">+</button>
+                        </div>
+                        <div class="row">
+                            <button class="button" onclick="insert('0')">0</button>
+                            <button class="button" onclick="insert('.')">.</button>
+                            <button class="button" onclick="calculate()">=</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                        <!-- To-do Listesi -->
             <div class="to-do-heading-column-box">
                 <div class="to-do-heading-box">
                     <h2> Yapılacaklar </h2>
@@ -125,6 +177,36 @@
                 <div class="to-do-button-box">
                     <button onclick="todoInputBackgroundFormPopUp()"> Ekle </button>
                 </div>
+            </div>
+
+            <!-- Not Kısmı -->
+
+            <div class="notes-outside-box">
+                <div class="notes-main-box">
+                    <div class="container">
+                      <div class="notes-heading-outside-box">
+                        <div class="notes-heading-inside-box">
+                          <h1>Not Defteri</h1>
+                        </div>
+                      </div>
+                      <form id="form">
+                        <input type="text" id="title" placeholder="Başlık ekle...">
+                        <textarea id="input" placeholder="Not ekle..."></textarea>
+                        <button type="submit">Ekle</button>
+                      </form>
+                        
+                    </div>
+                    <div class="notes-container-box">
+                        <ul id="list"></ul>
+                    </div>
+                  </div>
+
+
+
+
+
+
+                
             </div>
             </div>
             <div class="to-do-input-background-form" id="todo-input-background-formu">
@@ -150,7 +232,9 @@
 
 
 </div>
+<script src="js/calculator.js"></script>
 <script src="js/pomodoro-timer.js"></script>
 <script src="js/to-do.js"></script>
+<script src="js/notes.js"></script>
 </body>
 </html>
