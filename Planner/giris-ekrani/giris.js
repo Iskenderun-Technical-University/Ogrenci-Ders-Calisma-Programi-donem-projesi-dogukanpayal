@@ -63,3 +63,11 @@ function girisYapPopUpKapat()
           girisYapPopUpKapat();
         }
   }
+
+
+  // Button //
+
+  function anaSayfaGit()
+  {
+    window.location.href = '../ana-ekran/ana-ekran.html';
+  }
