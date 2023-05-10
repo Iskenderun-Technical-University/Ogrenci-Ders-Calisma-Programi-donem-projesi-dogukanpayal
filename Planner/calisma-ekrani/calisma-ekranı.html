@@ -182,7 +182,16 @@
             <!-- Not Kısmı -->
 
             <div class="notes-outside-box">
-                <div class="notes-main-box">
+                <div class="notes-down-button-box" id="notes-down-button-form">
+                    <button onclick="notEkleButtonPopUpKapat()"> - </button>
+                </div>
+                <div class="notes-up-button-box" id="notes-up-button-form">
+                    <button onclick="notEkleButtonPopUp()"> ^ </button>
+                </div>
+                <div class="notes-heading-box">
+                    <p> Notlar </p>
+                </div>
+                <div class="notes-main-box" id="notes-form">
                     <div class="container">
                       <div class="notes-heading-outside-box">
                         <div class="notes-heading-inside-box">
@@ -192,14 +201,20 @@
                       <form id="form">
                         <input type="text" id="title" placeholder="Başlık ekle...">
                         <textarea id="input" placeholder="Not ekle..."></textarea>
-                        <button type="submit">Ekle</button>
+                        <div class="notes-input-button-box">
+                            <button type="submit">Ekle</button>
+                            <button onclick="notesInputFormPopUpKapat()"> Kapat </button>
+                        </div>
                       </form>
                         
                     </div>
-                    <div class="notes-container-box">
-                        <ul id="list"></ul>
+                </div>
+                  <div class="notes-container-box" id="notes-container-form">
+                    <div class="add-note-button-box">
+                        <button onclick="notesInputFormPopUp()"> Not Ekle </button>
                     </div>
-                  </div>
+                    <ul id="list"></ul>
+                    </div>
 
 
 
