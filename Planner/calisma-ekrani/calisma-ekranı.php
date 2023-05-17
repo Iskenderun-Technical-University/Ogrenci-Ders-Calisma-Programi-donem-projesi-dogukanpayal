@@ -12,6 +12,44 @@
     <title>Çalışma Ekranı</title>
 </head>
 <body>
+<?php
+    session_start(); 
+    $myVar = $_SESSION['loggedUser'];
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "ana-proje";
+
+    // mysqli objesi oluşturma
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Bağlantıyı kontrol etme
+    if ($conn->connect_error) {
+    die("Bağlantı hatası: " . $conn->connect_error);
+    }
+    echo "Bağlantı başarılı!";
+
+    $notes = array();
+
+    $query = "SELECT * FROM notes";
+    $result = mysqli_query($conn , $query);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $note = array(
+                'id' => $row['id'],
+                'userid' => $row['userid'],
+                'heading' => $row['heading'],
+                'note' => $row['note']
+            );
+            array_push($notes, $note);
+        }
+    }
+
+?>
+
+
 <div class="body-background">
 
 
@@ -198,12 +236,17 @@
                           <h1>Not Defteri</h1>
                         </div>
                       </div>
-                      <form id="form">
-                        <input type="text" id="title" placeholder="Başlık ekle...">
-                        <textarea id="input" placeholder="Not ekle..."></textarea>
+                      <form id="form" action="../php/not-ekle.php" method="post">
+                        <input type="text" id="title" placeholder="Başlık ekle..." name="heading">
+                        <textarea id="input" placeholder="Not ekle..." name="note"></textarea>
+                        <?php
+                            
+                            echo '<input value="'.$myVar.'" name ="userid" style="display:none;" id="kekw">'
+                            
+                        ?>
                         <div class="notes-input-button-box">
                             <button type="submit">Ekle</button>
-                            <button onclick="notesInputFormPopUpKapat()"> Kapat </button>
+                            <button onclick="notesInputFormPopUpKapat()" type="button"> Kapat </button>
                         </div>
                       </form>
                         
@@ -213,7 +256,32 @@
                     <div class="add-note-button-box">
                         <button onclick="notesInputFormPopUp()"> Not Ekle </button>
                     </div>
-                    <ul id="list"></ul>
+                    <ul id="list">
+                    <?php
+                            for($i=0;$i<count($notes);$i++)
+                            {
+                                if($notes[$i]["userid"] == $myVar )
+                                {
+                                    
+                                    
+                                        echo '<form action="../php/not-sil.php" method="post">';
+                                            echo '<input type="text" style=" pointer-events:none; display:none; " name="id" value="'.$notes[$i]["id"].'"></input>';
+                                            echo '<li>';
+                                            echo '<h3>'.$notes[$i]["heading"].'</h3>';
+                                            echo '<span>'.$notes[$i]["note"].'</span>';
+                                            echo '<button>X</button>';
+                                            echo '</li>';
+                                        echo '</form>';
+                                    
+                                }
+                            }
+                        ?>
+                        <!-- <li> 
+                            <h3> ördek </h3>
+                            <span>asd</span>
+                            <button>asd</button>
+                        </li> -->
+                    </ul>
                     </div>
 
 

@@ -468,14 +468,15 @@
 
     <div class="work-button-outside-box">
         <div class="work-button-box">
-            <button onclick="calismaEkraniGit()"> Çalışma Ekranı </button>
+            <form action="../php/calisma-ekrani-gec.php">
+                <button> Çalışma Ekranı </button>
+            </form>
         </div>
 
     </div>
 
   <!-- -->
 </div>
-    <script src="ana-ekran.js"></script>
     <script src="javascript/ders-programi.js"></script>
     <script src="javascript/hedeflerim.js"></script>
 </body>

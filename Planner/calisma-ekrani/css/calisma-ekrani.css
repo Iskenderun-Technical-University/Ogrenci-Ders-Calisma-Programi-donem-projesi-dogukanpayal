@@ -37,3 +37,7 @@ body{
     font-size: 30px;
     text-decoration: underline;
 }
+
+#kekw{
+    display: none;
+}
