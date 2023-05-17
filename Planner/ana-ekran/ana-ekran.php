@@ -15,6 +15,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;900&family=Montserrat:ital,wght@0,100;0,400;0,500;0,900;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+<?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "ana-proje";
+
+    // mysqli objesi oluşturma
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Bağlantıyı kontrol etme
+    if ($conn->connect_error) {
+    die("Bağlantı hatası: " . $conn->connect_error);
+    }
+    echo "Bağlantı başarılı!";
+
+    $users = array();
+
+    $query = "SELECT * FROM users";
+    $result = mysqli_query($conn , $query);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $user = array(
+                'id' => $row['id'],
+                'username' => $row['username'],
+                'password' => $row['password']
+            );
+            array_push($users, $user);
+        }
+    }
+
+?>
+
+
 <div class="body-background">
   <!-- Karşılama Ekranı -->
     <div class="ana-sayfa-heading-box">
@@ -25,7 +59,7 @@
         <h3> <?php
         session_start(); 
         $myVar = $_SESSION['loggedUser'];
-        echo $myVar;
+        echo $users[$myVar - 1]["username"];
         ?></h3>
       </div>
     </div>
