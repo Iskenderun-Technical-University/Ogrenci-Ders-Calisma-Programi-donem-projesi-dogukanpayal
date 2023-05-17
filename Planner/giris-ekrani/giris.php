@@ -31,57 +31,56 @@
     <!-- Kayıt ve Giriş Ekranı Genel Kutusu-->
     <div class="register-login-screen animate__animated animate__fadeIn" id="kayit-ol-background-formu">
         <!-- Kayıt Ekranı -->
-        <div class="register-screen animate__animated animate__fadeInDown" id="kayit-ol-formu">
+        <form class="register-screen animate__animated animate__fadeInDown" id="kayit-ol-formu" action="../php/kayit-ol.php" method="post">
             <p>Kayıt ol</p>
             <div class="label-input-box">
                 <label for="register-username">Kullanıcı Adı</label>
                 <div class="input-box">
-                    <input type="text" id="register-username">
+                    <input type="text" id="register-username" name="isim">
                 </div>
             </div>
             <div class="label-input-box">
                 <label for="register-email">E-Mail</label>
                 <div class="input-box">
-                    <input type="email" id="register-email">
+                    <input type="email" id="register-email" name="email">
                 </div>
             </div>
             <div class="label-input-box">
                 <label for="register-password1">Şifre</label>
                 <div class="input-box">
-                    <input type="password" id="register-password1">
+                    <input type="password" id="register-password1" name="password">
                 </div>
             </div>
             <div class="label-input-box">
                 <label for="register-password2">Şifre</label>
                 <div class="input-box">
-                    <input type="password" id="register-password2">
+                    <input type="password" id="register-password2" name="password2">
                 </div>
             </div>
             <div class="register-button">
-                <button onclick="anaSayfaGit()"> Kayıt Ol </button>
+                <button> Kayıt Ol </button>
             </div>
-        </div>
+        </form>
         <!-- Giriş Ekranı -->
-        <div class="login-screen animate__animated animate__fadeInDown" id="giris-yap-formu">
+        <form class="login-screen animate__animated animate__fadeInDown" id="giris-yap-formu" action="../php/giris-yap.php" method="post">
             <p> Giris Yap </p>
             <div class="label-input-box">
                 <label for="login-username">Kullanıcı Adı</label>
                 <div class="input-box">
-                    <input type="text" id="login-username">
+                    <input type="text" id="login-username" name="login-isim">
                 </div>
             </div>
             <div class="label-input-box">
                 <label for="login-password">Şifre</label>
                 <div class="input-box">
-                    <input type="password" id="login-password">
+                    <input type="password" id="login-password" name="login-password">
                 </div>
             </div>
             <div class="login-button">
-                <button onclick="anaSayfaGit()">Giris Yap</button>
+                <button>Giris Yap</button>
 
             </div>
-        </div>
-
+        </form>
     </div>
     
 

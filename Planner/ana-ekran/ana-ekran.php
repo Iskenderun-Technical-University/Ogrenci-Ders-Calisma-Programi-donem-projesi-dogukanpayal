@@ -22,7 +22,11 @@
         <h1> Hosgeldin </h1>
       </div>
       <div class="username-box">
-        <h3> Kullanıcı adi</h3>
+        <h3> <?php
+        session_start(); 
+        $myVar = $_SESSION['loggedUser'];
+        echo $myVar;
+        ?></h3>
       </div>
     </div>
 
