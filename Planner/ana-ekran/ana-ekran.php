@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merhaba</title>
     <link rel="stylesheet" href="css/ana-sayfa-basligi.css">
-    <link rel="stylesheet" href="css/takvim.css">
     <link rel="stylesheet" href="css/hedeflerim.css">
     <link rel="stylesheet" href="css/ders-programi.css">
     <link rel="stylesheet" href="css/work-button.css">
@@ -46,6 +45,23 @@
         }
     }
 
+    $dersler = array();
+
+    $derslerQuery = "SELECT * FROM syllabus";
+    $derslerResult = mysqli_query($conn , $derslerQuery);
+
+    if ($derslerResult->num_rows > 0) {
+        while ($row = $derslerResult->fetch_assoc()) {
+            $ders = array(
+                'id' => $row['id'],
+                'userid' => $row['userid'],
+                'date' => $row['date'],
+                'content' => $row['content']
+            );
+            array_push($dersler, $ders);
+        }
+    }
+
 ?>
 
 
@@ -75,12 +91,30 @@
         </div>
         <div class="columns-box">
             <!-- Pazartesi -->
+            
             <div class="day">
                 <div class="day-heading-box">
                     <h3>Pzt</h3>
                 </div>
                 <div class="day-items-box">
                     <ul id="pazartesi-item-container">
+                        <?php
+                            for($i=0;$i<count($dersler);$i++)
+                            {
+                                if($dersler[$i]["userid"] == $myVar )
+                                {
+                                    if($dersler[$i]["date"] == "Pazartesi")
+                                    {
+                                        echo '<form action="../php/ders-sil.php" method="post">';
+                                            echo '<input type="text" style=" pointer-events:none; display:none; " name="id" value="'.$dersler[$i]["id"].'"></input>';
+                                            echo '<li>'.$dersler[$i]["content"].'</li>';
+                                            echo '<button>X</button>';
+                                        echo '</form>';
+                                    }
+                                }
+                            }
+                        ?>
+
                         <!--
                         <li>Ders 1</li>
                         <li>Ders 2</li>
@@ -95,7 +129,24 @@
                     <h3>Sal</h3>
                 </div>
                 <div class="day-items-box">
+                    
                     <ul id="sali-item-container">
+                    <?php
+                            for($i=0;$i<count($dersler);$i++)
+                            {
+                                if($dersler[$i]["userid"] == $myVar )
+                                {
+                                    if($dersler[$i]["date"] == "Salı")
+                                    {
+                                        echo '<form action="../php/ders-sil.php" method="post">';
+                                            echo '<input type="text" style=" pointer-events:none; display:none; " name="id" value="'.$dersler[$i]["id"].'"></input>';
+                                            echo '<li>'.$dersler[$i]["content"].'</li>';
+                                            echo '<button>X</button>';
+                                        echo '</form>';
+                                    }
+                                }
+                            }
+                        ?>
                         <!--
                         <li>Ders 1</li>
                         <li>Ders 2</li>
@@ -111,6 +162,22 @@
                 </div>
                 <div class="day-items-box">
                     <ul id="carsamba-item-container">
+                    <?php
+                            for($i=0;$i<count($dersler);$i++)
+                            {
+                                if($dersler[$i]["userid"] == $myVar )
+                                {
+                                    if($dersler[$i]["date"] == "Çarşamba")
+                                    {
+                                        echo '<form action="../php/ders-sil.php" method="post">';
+                                        echo '<input type="text" style=" pointer-events:none; display:none; " name="id" value="'.$dersler[$i]["id"].'"></input>';
+                                        echo '<li>'.$dersler[$i]["content"].'</li>';
+                                        echo '<button>X</button>';
+                                        echo '</form>';                                    
+                                    }
+                                }
+                            }
+                        ?>
                         <!--
                         <li>Ders 1</li>
                         <li>Ders 2</li>
@@ -126,6 +193,22 @@
                 </div>
                 <div class="day-items-box">
                     <ul id="persembe-item-container">
+                    <?php
+                            for($i=0;$i<count($dersler);$i++)
+                            {
+                                if($dersler[$i]["userid"] == $myVar )
+                                {
+                                    if($dersler[$i]["date"] == "Perşembe")
+                                    {
+                                        echo '<form action="../php/ders-sil.php" method="post">';
+                                        echo '<input type="text" style=" pointer-events:none; display:none; " name="id" value="'.$dersler[$i]["id"].'"></input>';
+                                        echo '<li>'.$dersler[$i]["content"].'</li>';
+                                        echo '<button>X</button>';
+                                        echo '</form>';                                    
+                                    }
+                                }
+                            }
+                        ?>
                         <!--
                         <li>Ders 1</li>
                         <li>Ders 2</li>
@@ -141,6 +224,22 @@
                 </div>
                 <div class="day-items-box">
                     <ul id="cuma-item-container">
+                    <?php
+                            for($i=0;$i<count($dersler);$i++)
+                            {
+                                if($dersler[$i]["userid"] == $myVar )
+                                {
+                                    if($dersler[$i]["date"] == "Cuma")
+                                    {
+                                        echo '<form action="../php/ders-sil.php" method="post">';
+                                        echo '<input type="text" style=" pointer-events:none; display:none; " name="id" value="'.$dersler[$i]["id"].'"></input>';
+                                        echo '<li>'.$dersler[$i]["content"].'</li>';
+                                        echo '<button>X</button>';
+                                        echo '</form>';                                    
+                                    }
+                                }
+                            }
+                        ?>
                         <!--
                         <li>Ders 1</li>
                         <li>Ders 2</li>
@@ -156,6 +255,22 @@
                 </div>
                 <div class="day-items-box">
                     <ul id="cumartesi-item-container">
+                    <?php
+                            for($i=0;$i<count($dersler);$i++)
+                            {
+                                if($dersler[$i]["userid"] == $myVar )
+                                {
+                                    if($dersler[$i]["date"] == "Cumartesi")
+                                    {
+                                        echo '<form action="../php/ders-sil.php" method="post">';
+                                        echo '<input type="text" style=" pointer-events:none; display:none; " name="id" value="'.$dersler[$i]["id"].'"></input>';
+                                        echo '<li>'.$dersler[$i]["content"].'</li>';
+                                        echo '<button>X</button>';
+                                        echo '</form>';                                    
+                                    }
+                                }
+                            }
+                        ?>
                         <!--
                         <li>Ders 1</li>
                         <li>Ders 2</li>
@@ -171,6 +286,22 @@
                 </div>
                 <div class="day-items-box">
                     <ul id="pazar-item-container">
+                    <?php
+                            for($i=0;$i<count($dersler);$i++)
+                            {
+                                if($dersler[$i]["userid"] == $myVar )
+                                {
+                                    if($dersler[$i]["date"] == "Pazar")
+                                    {
+                                        echo '<form action="../php/ders-sil.php" method="post">';
+                                        echo '<input type="text" style=" pointer-events:none; display:none; " name="id" value="'.$dersler[$i]["id"].'"></input>';
+                                        echo '<li>'.$dersler[$i]["content"].'</li>';
+                                        echo '<button>X</button>';
+                                        echo '</form>';                                    
+                                    }
+                                }
+                            }
+                        ?>
                         <!--
                         <li>Ders 1</li>
                         <li>Ders 2</li>
@@ -187,17 +318,18 @@
 
 </div>
 <!-- Input Form -->
-<div class="input-background-form" id="input-background-formu">
+<form class="input-background-form" id="input-background-formu" action="../php/ders-ekle.php" method="post">
     <div class="input-form">
         <div class="heading-box">
             <h2>Dersinizi Ekleyin</h2>
         </div>
         <div class="input-box">
-            <input type="text" id="input-box">
+            <input type="text" id="input-box" name="content">
         </div>
         <div class="input-button-box">
-            <button onclick="daySelectorFormPopUp()">Ekle</button>
+            <button>Ekle</button>
         </div>
+        <input type="text" style="pointer-events: none;" id="selected-date" value="Pazartesi" name="date">  </input>
     </div>
     <div class="day-selector-box" id="day-selector-background-formu">
         <div class="day-selector-heading-box">
@@ -205,30 +337,33 @@
         </div>
         <div class="day-selector-button-box-form">
           <div class="button-box">
-            <button onclick="addTaskPazartesi()">Pzt</button>
+            <button type="button" onclick="addTaskPazartesi()">Pzt</button>
           </div>
           <div class="button-box">
-            <button onclick="addTaskSali()">Sal</button>
+            <button type="button" onclick="addTaskSali()">Sal</button>
           </div>
           <div class="button-box">            
-            <button onclick="addTaskCarsamba()">Çar</button>
+            <button type="button" onclick="addTaskCarsamba()">Çar</button>
           </div>
           <div class="button-box">
-            <button onclick="addTaskPersembe()">Per</button>
+            <button type="button" onclick="addTaskPersembe()">Per</button>
           </div>
           <div class="button-box">
-            <button onclick="addTaskCuma()">Cum</button>
+            <button type="button" onclick="addTaskCuma()">Cum</button>
           </div>
           <div class="button-box">
-            <button onclick="addTaskCumartesi()">Cmt</button>
+            <button type="button" onclick="addTaskCumartesi()">Cmt</button>
           </div>
           <div class="button-box">
-            <button onclick="addTaskPazar()">Pzr</button>
+            <button type="button" onclick="addTaskPazar()">Pzr</button>
           </div>
 
         </div>
     </div>
-</div>
+    <?php
+        echo '<input type="text" style="display:none pointer-events: none;" value="'.$myVar.'" name="userid">'
+    ?>
+</form>
 </div>
 
 
