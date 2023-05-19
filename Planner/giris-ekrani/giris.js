@@ -71,3 +71,22 @@ function girisYapPopUpKapat()
   {
     window.location.href = '../ana-ekran/ana-ekran.html';
   }
+
+  // kayıt ol button //
+
+  var kayitOlButton = document.getElementById("kayitOlButton");
+  var password1 = document.getElementById("register-password1");
+  var password2 = document.getElementById("register-password2");
+  var username = document.getElementById("register-username");
+function kayitOlKontrol()
+{
+
+  if(password1.value !== password2.value || username.value.length === 0 || password1.value.length === 0 || password2.value.length === 0 )
+  {
+    kayitOlButton.disabled = true;
+  } 
+  else
+  {
+    kayitOlButton.disabled = false;
+  }
+}

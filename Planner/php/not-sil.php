@@ -11,7 +11,7 @@
     if ($conn->connect_error) {
     die("Bağlantı hatası: " . $conn->connect_error);
     }
-    echo "Bağlantı başarılı!";
+    echo "";
 
     $id = $_POST["id"];
 
@@ -19,7 +19,8 @@
     $sql = "DELETE FROM notes WHERE id = $id";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Veri başarıyla silindi";
+        header("Location: ../calisma-ekrani/calisma-ekranı.php");
+            exit;
     } else {
         echo "Silme hatası: " . $conn->error;
     }

@@ -36,7 +36,7 @@
             <div class="label-input-box">
                 <label for="register-username">Kullanıcı Adı</label>
                 <div class="input-box">
-                    <input type="text" id="register-username" name="isim">
+                    <input type="text" id="register-username" name="isim" onkeyup="kayitOlKontrol()">
                 </div>
             </div>
             <div class="label-input-box">
@@ -48,17 +48,17 @@
             <div class="label-input-box">
                 <label for="register-password1">Şifre</label>
                 <div class="input-box">
-                    <input type="password" id="register-password1" name="password">
+                    <input type="password" id="register-password1" name="password" onkeyup="kayitOlKontrol()">
                 </div>
             </div>
             <div class="label-input-box">
                 <label for="register-password2">Şifre</label>
                 <div class="input-box">
-                    <input type="password" id="register-password2" name="password2">
+                    <input type="password" id="register-password2" name="password2" onkeyup="kayitOlKontrol()">
                 </div>
             </div>
             <div class="register-button">
-                <button> Kayıt Ol </button>
+                <button id="kayitOlButton" disabled> Kayıt Ol </button>
             </div>
         </form>
         <!-- Giriş Ekranı -->

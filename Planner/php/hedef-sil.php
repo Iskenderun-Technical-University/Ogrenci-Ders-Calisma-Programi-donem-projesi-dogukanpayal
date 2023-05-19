@@ -15,12 +15,12 @@
     $id = $_POST["id"];
 
     // Silme sorgusunu hazırla ve çalıştır
-    $sql = "DELETE FROM syllabus WHERE id = $id";
+    $sql = "DELETE FROM goals WHERE id = $id";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: ../ana-ekran/ana-ekran.php");
         exit;
     } else {
-        echo "Ders Silme hatası: " . $conn->error;
+        echo "Hedef Silme hatası: " . $conn->error;
     }
 ?>

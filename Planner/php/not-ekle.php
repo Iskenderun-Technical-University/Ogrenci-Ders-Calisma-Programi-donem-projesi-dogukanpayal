@@ -12,7 +12,7 @@
     if ($conn->connect_error) {
     die("Bağlantı hatası: " . $conn->connect_error);
     }
-    echo "Bağlantı başarılı!";
+    echo "";
 
 
     $userid = $_POST["userid"];
@@ -24,7 +24,8 @@
         $sql = "INSERT INTO notes (userid , heading , note) VALUES ('$userid' , '$heading' , '$note')";
         if(mysqli_query($conn , $sql))
         {
-            echo "Başarılı";
+            header("Location: ../calisma-ekrani/calisma-ekranı.php");
+            exit;
             mysqli_close($conn);
         }
         else

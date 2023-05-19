@@ -200,7 +200,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    display: none;
 }
 
 .goal-input-background-form .goal-selector-heading-box{
@@ -249,4 +248,15 @@
     height: 100%;
     background-color: transparent;
     border: 1px solid transparent;
+}
+
+#selected-time{
+    max-width: 60px;
+    text-align: center;
+}
+
+.secili-hedef{
+    background-color: #140009;
+    border: 2px solid #360018;
+    border-radius: 3px;
 }

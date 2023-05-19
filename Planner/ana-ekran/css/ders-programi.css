@@ -279,3 +279,9 @@ ul li span:hover{
     max-height: 60px;
     text-align: center;
 }
+
+.secili-gun{
+    background-color: #140009;
+    border: 2px solid #360018;
+    border-radius: 3px;
+}

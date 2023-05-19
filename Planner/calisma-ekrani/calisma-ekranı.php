@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="css/to-do.css">
     <link rel="stylesheet" href="css/calculator.css">
     <link rel="stylesheet" href="css/notes.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>Çalışma Ekranı</title>
 </head>
 <body>
@@ -105,7 +109,7 @@
                 </div>
                 
             </div>
-            <div class="pomodoro-settings-input-form" id="pomodoro-input-background-formu">
+            <div class="pomodoro-settings-input-form animate__animated animate__fadeIn" id="pomodoro-input-background-formu">
                 <form class="timer-form">
                     <div class="timer-form-heading">
                         <h1>Ayarlar</h1>
@@ -159,7 +163,7 @@
                         <p> Hesap Makinesi </p>
                     </div>
 
-                    <div class="calculator-inside-box" id="calculator-form">
+                    <div class="calculator-inside-box animate__animated animate__backInUp " id="calculator-form">
                         <input type="text" class="result" id="result" readonly>
                     <div class="calculator-row-box">
                         <div class="row">
@@ -229,7 +233,7 @@
                 <div class="notes-heading-box">
                     <p> Notlar </p>
                 </div>
-                <div class="notes-main-box" id="notes-form">
+                <div class="notes-main-box animate__animated animate__fadeIn" id="notes-form">
                     <div class="container">
                       <div class="notes-heading-outside-box">
                         <div class="notes-heading-inside-box">
@@ -253,7 +257,7 @@
                     </div>
                 </div>
                   <div class="notes-container-box" id="notes-container-form">
-                    <div class="add-note-button-box">
+                    <div class="add-note-button-box animate__animated animate__fadeIn">
                         <button onclick="notesInputFormPopUp()"> Not Ekle </button>
                     </div>
                     <ul id="list">

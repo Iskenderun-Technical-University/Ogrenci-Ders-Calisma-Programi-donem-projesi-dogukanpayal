@@ -16,12 +16,12 @@ die("Bağlantı hatası: " . $conn->connect_error);
 
 
 $userid = $_POST["userid"];
-$date = $_POST["date"];
-$content = $_POST["content"];
+$time = $_POST["time"];
+$goal = $_POST["goal"];
 
 
 
-    $sql = "INSERT INTO syllabus (userid , date , content) VALUES ('$userid' , '$date' , '$content')";
+    $sql = "INSERT INTO goals (userid , time , goal) VALUES ('$userid' , '$time' , '$goal')";
     if(mysqli_query($conn , $sql))
     {
         header("Location: ../ana-ekran/ana-ekran.php");
@@ -30,7 +30,7 @@ $content = $_POST["content"];
     }
     else
     {
-        echo "Ders Ekleme Başarısız";
+        echo "Hedef Ekleme Başarısız";
         mysqli_close($conn);
     }
 

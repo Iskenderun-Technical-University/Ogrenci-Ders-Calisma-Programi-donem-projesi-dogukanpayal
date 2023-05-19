@@ -136,6 +136,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .register-login-screen .register-screen button{
     background-color: #1a0020;
     border: 1px solid #1d000d;
@@ -143,7 +144,13 @@ body{
     width: 150px;
     border-radius: 20px;
 }
-.register-login-screen .register-screen button:hover{
+.register-login-screen .register-screen button:disabled {
+    background-color: grey;
+    color: black;
+}
+
+
+.register-login-screen .register-screen button:not(:disabled):hover{
     background-color: white;
     color: #1a0020;
     transition: all .5s;

@@ -12,6 +12,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;900&family=Montserrat:ital,wght@0,100;0,400;0,500;0,900;1,900&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
 <?php
@@ -27,7 +31,7 @@
     if ($conn->connect_error) {
     die("Bağlantı hatası: " . $conn->connect_error);
     }
-    echo "Bağlantı başarılı!";
+    echo "";
 
     $users = array();
 
@@ -62,17 +66,34 @@
         }
     }
 
+    $hedefler = array();
+
+    $hedeflerQuery = "SELECT * FROM goals";
+    $hedeflerResult = mysqli_query($conn , $hedeflerQuery);
+
+    if ($hedeflerResult->num_rows > 0) {
+        while ($row = $hedeflerResult->fetch_assoc()) {
+            $hedef = array(
+                'id' => $row['id'],
+                'userid' => $row['userid'],
+                'time' => $row['time'],
+                'goal' => $row['goal']
+            );
+            array_push($hedefler, $hedef);
+        }
+    }
+
 ?>
 
 
 <div class="body-background">
   <!-- Karşılama Ekranı -->
     <div class="ana-sayfa-heading-box">
-      <div class="heading-box">
+      <div class="animate__animated animate__fadeIn heading-box">
         <h1> Hosgeldin </h1>
       </div>
       <div class="username-box">
-        <h3> <?php
+        <h3 class="animate__animated animate__fadeIn"> <?php
         session_start(); 
         $myVar = $_SESSION['loggedUser'];
         echo $users[$myVar - 1]["username"];
@@ -318,7 +339,7 @@
 
 </div>
 <!-- Input Form -->
-<form class="input-background-form" id="input-background-formu" action="../php/ders-ekle.php" method="post">
+<form class="input-background-form animate__animated animate__fadeIn" id="input-background-formu" action="../php/ders-ekle.php" method="post">
     <div class="input-form">
         <div class="heading-box">
             <h2>Dersinizi Ekleyin</h2>
@@ -329,7 +350,9 @@
         <div class="input-button-box">
             <button>Ekle</button>
         </div>
-        <input type="text" style="pointer-events: none;" id="selected-date" value="Pazartesi" name="date">  </input>
+        <div class="secili-gun">
+            <input type="text" style="pointer-events: none;" id="selected-date" value="Pazartesi" name="date">  </input>
+        </div>
     </div>
     <div class="day-selector-box" id="day-selector-background-formu">
         <div class="day-selector-heading-box">
@@ -361,7 +384,7 @@
         </div>
     </div>
     <?php
-        echo '<input type="text" style="display:none pointer-events: none;" value="'.$myVar.'" name="userid">'
+        echo '<input type="text" style="display:none; pointer-events: none;" value="'.$myVar.'" name="userid">'
     ?>
 </form>
 </div>
@@ -384,6 +407,22 @@
                 </div>
                 <div class="goal-item-box">
                     <ul id="haftalik-item-container">
+                    <?php
+                            for($i=0;$i<count($hedefler);$i++)
+                            {
+                                if($hedefler[$i]["userid"] == $myVar )
+                                {
+                                    if($hedefler[$i]["time"] == "Haftalık")
+                                    {
+                                        echo '<form action="../php/hedef-sil.php" method="post">';
+                                        echo '<input type="text" style=" pointer-events:none; display:none; " name="id" value="'.$hedefler[$i]["id"].'"></input>';
+                                        echo '<li>'.$hedefler[$i]["goal"].'</li>';
+                                        echo '<button>X</button>';
+                                        echo '</form>';                                    
+                                    }
+                                }
+                            }
+                        ?>
                         <!--
                         <li>Hedef 1</li>
                         <li>Hedef 2</li>
@@ -399,6 +438,22 @@
                 </div>
                 <div class="goal-item-box">
                     <ul id="aylik-item-container">
+                    <?php
+                            for($i=0;$i<count($hedefler);$i++)
+                            {
+                                if($hedefler[$i]["userid"] == $myVar )
+                                {
+                                    if($hedefler[$i]["time"] == "Aylık")
+                                    {
+                                        echo '<form action="../php/hedef-sil.php" method="post">';
+                                        echo '<input type="text" style=" pointer-events:none; display:none; " name="id" value="'.$hedefler[$i]["id"].'"></input>';
+                                        echo '<li>'.$hedefler[$i]["goal"].'</li>';
+                                        echo '<button>X</button>';
+                                        echo '</form>';                                    
+                                    }
+                                }
+                            }
+                        ?>
                         <!--
                         <li>Hedef 1</li>
                         <li>Hedef 2</li>
@@ -414,6 +469,22 @@
                 </div>
                 <div class="goal-item-box">
                     <ul id="yillik-item-container">
+                    <?php
+                            for($i=0;$i<count($hedefler);$i++)
+                            {
+                                if($hedefler[$i]["userid"] == $myVar )
+                                {
+                                    if($hedefler[$i]["time"] == "Yıllık")
+                                    {
+                                        echo '<form action="../php/hedef-sil.php" method="post">';
+                                        echo '<input type="text" style=" pointer-events:none; display:none; " name="id" value="'.$hedefler[$i]["id"].'"></input>';
+                                        echo '<li>'.$hedefler[$i]["goal"].'</li>';
+                                        echo '<button>X</button>';
+                                        echo '</form>';                                    
+                                    }
+                                }
+                            }
+                        ?>
                         <!--
                         <li>Hedef 1</li>
                         <li>Hedef 2</li>
@@ -430,35 +501,42 @@
     </div>
 
     <!-- Input Form -->
-    <div class="goal-input-background-form" id="goals-input-background-formu">
+    <form class="goal-input-background-form animate__animated animate__fadeIn" id="goals-input-background-formu" action="../php/hedef-ekle.php" method="post">
         <div class="input-form">
             <div class="heading-box">
-                <h2>Dersinizi Ekleyin</h2>
+                <h2>Hedefinizi Ekleyin</h2>
             </div>
             <div class="input-box">
-                <input type="text" id="goal-input-box">
+                <input type="text" id="goal-input-box" name="goal">
             </div>
             <div class="input-button-box">
-                <button onclick="goalSelectorFormPopUp()">Ekle</button>
+                <button>Ekle</button>
             </div>
-        </div>
+            <div class="secili-hedef">
+                <input type="text" style="pointer-events: none;" id="selected-time" value="Haftalık" name="time">  </input>
+            </div>
+            </div>
         <div class="goal-selector-box" id="goal-selector-background-formu">
             <div class="goal-selector-heading-box">
                 <h3>Gün Seçiniz</h3>
             </div>
             <div class="goal-selector-button-box-form">
+            
                 <div class="button-box">
-                    <button onclick="addTaskHaftalik()">Haftalık</button>
+                    <button type="button" onclick="addTaskHaftalik()" >Haftalık</button>
                 </div>
                 <div class="button-box">
-                    <button onclick="addTaskAylik()">Aylık</button>
+                    <button type="button" onclick="addTaskAylik()">Aylık</button>
                 </div>
                 <div class="button-box">
-                    <button onclick="addTaskYillik()">Yıllık</button>
+                    <button type="button" onclick="addTaskYillik()">Yıllık</button>
                 </div>
             </div>
         </div>
-    </div>
+        <?php
+        echo '<input type="text" style="display:none; pointer-events: none;" value="'.$myVar.'" name="userid">'
+        ?>
+    </form>
 </div>
     <!--  -->
 
