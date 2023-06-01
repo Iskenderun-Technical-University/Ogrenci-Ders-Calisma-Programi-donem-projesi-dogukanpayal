@@ -295,8 +295,8 @@
                 
             </div>
             </div>
-            <div class="to-do-input-background-form" id="todo-input-background-formu">
-            <div class="to-do-input-form">
+            <div class="to-do-input-background-form animate__animated animate__fadeIn" id="todo-input-background-formu">
+            <div class="to-do-input-form animate__animated animate__fadeIn">
                 <div class="to-do-heading-box">
                     <h2> Görevinizi Ekleyin </h2>
                 </div>
