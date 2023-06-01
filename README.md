@@ -15,7 +15,6 @@
     * Ders programı
     * Hedefler
     * Pomodoro kronometresi
-    * Whitenoise için medya oynatıcı
     * Pomodoro zamanı içinde yapılacaklar listesi
 
 
@@ -31,7 +30,5 @@
     * Kullanıcıların yıllık , aylık , haftalık hedeflerini tutan bir tablo.
 
     * Kullanıcıların son calıştıkları zamandaki yaptıkları ilerlemeleri görmeleri için bir tablo.
-
-    * Kullanıcıların çalışma kaynaklarının linklerini tutan bir tablo.
 
     * Kullanıcıların notlarını kaydetmeyi sağlayan bir tablo.
