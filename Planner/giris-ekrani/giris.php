@@ -34,7 +34,7 @@
         <form class="register-screen animate__animated animate__fadeInDown" id="kayit-ol-formu" action="../php/kayit-ol.php" method="post">
             <div class="heading">
                 <p>Kayıt ol</p>
-            <div>
+            </div>
             <div class="label-input-box">
                 <label for="register-username">Kullanıcı Adı</label>
                 <div class="input-box">
@@ -85,7 +85,6 @@
             </div>
             <div class="login-button">
                 <button>Giris Yap</button>
-
             </div>
         </form>
     </div>
