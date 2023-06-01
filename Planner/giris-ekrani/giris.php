@@ -32,7 +32,9 @@
     <div class="register-login-screen animate__animated animate__fadeIn" id="kayit-ol-background-formu">
         <!-- Kayıt Ekranı -->
         <form class="register-screen animate__animated animate__fadeInDown" id="kayit-ol-formu" action="../php/kayit-ol.php" method="post">
-            <p>Kayıt ol</p>
+            <div class="heading">
+                <p>Kayıt ol</p>
+            <div>
             <div class="label-input-box">
                 <label for="register-username">Kullanıcı Adı</label>
                 <div class="input-box">
@@ -59,6 +61,11 @@
             </div>
             <div class="register-button">
                 <button id="kayitOlButton" disabled> Kayıt Ol </button>
+            </div>
+            <div class="outside-kayıt-basarili-p">
+                <div class="kayit-basarili-p">
+                    <p> Başarıyla Kayıt Oldunuz </p>
+                </div>
             </div>
         </form>
         <!-- Giriş Ekranı -->
