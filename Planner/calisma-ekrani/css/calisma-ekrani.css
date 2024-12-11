@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("https://images.hdqwalls.com/wallpapers/purple-nebula-haze-stars-4k-r6.jpg");
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+    
+
+}
+
+.body-background{
+    height: 100vh;
+    width: 99vw;
+    background-color: #40004e07;
+}
+
+.calisma-ekrani-heading-outside-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.calisma-ekrani-heading-box{
+    border: 1px solid #360018;
+    background-color: #1d000d;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 500px;
+    color: white;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+#kekw{
+    display: none;
+}

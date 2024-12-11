@@ -1,0 +1,27 @@
+.work-button-outside-box{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-button-box{
+    
+    width: 500px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background-color: #1d000d;
+    border: 1px solid #360018;
+}
+
+.work-button-box button{
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: large;
+}

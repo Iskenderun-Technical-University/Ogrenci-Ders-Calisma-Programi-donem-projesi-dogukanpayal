@@ -1,0 +1,248 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color: whitesmoke;
+}
+body{
+    
+    background-image: url("https://images.hdqwalls.com/wallpapers/purple-nebula-haze-stars-4k-r6.jpg");
+    background-size: cover;
+}
+.welcoming-paragraph{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: all .3s;
+    background-color: #a0005d09;
+}
+.welcoming-paragraph .top-part{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+}
+.welcoming-paragraph p{
+    font-family: 'Inter', sans-serif;
+    
+}
+.welcoming-paragraph .merhaba{
+    font-size: 10rem;
+    font-weight: 900;
+}
+.welcoming-paragraph #motivasyonSozu{
+    font-size: 2rem;
+    font-weight: 100;
+    color: rgb(172, 172, 172);
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    height: 30%;
+
+}
+.buttons button{
+    color:black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.5rem;
+    transition: all .5s;
+}
+.buttons .kayit{
+    background-color: #1d000d;
+    color: white;
+    border: 1px solid #1a0020;
+}
+.buttons .giris{
+    background-color: #1d000d;
+    color: white;
+    border: 1px solid #1a0020;
+}
+.buttons .kayit:hover{
+    background-color: white;
+    color: #1d000d;
+}
+.buttons .giris:hover{
+    background-color: white;
+    color: #1d000d;
+}
+
+/* Kayit Olma Ekranı*/
+.register-login-screen{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0a062094;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.register-login-screen .register-screen{
+    display: flex;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 75px;
+    padding-right: 75px ;
+    background-color: #1d000d;
+    border: 2px solid #38001a;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    border-radius: 30px;
+    display: none;
+}
+
+.register-login-screen .register-screen .input-box{
+    display: flex;
+    border: 2px solid #1d000d;
+    background-color: #1a0020;
+    border-radius: 30px;
+    padding:10px;
+}
+
+.register-login-screen .register-screen input{
+    padding: 1px;
+    color: whitesmoke;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 20px;
+    outline: none;
+}
+.register-login-screen .register-screen label{
+    font-size: 20px;
+}
+.register-login-screen .register-screen .label-input-box{
+    padding-bottom: 30px;
+}
+.register-login-screen .register-screen .heading > p {
+    text-align: center;
+    font-size: 80px;
+    padding-bottom:50px;
+    font-weight: 900px;
+    text-decoration: underline;
+}
+.register-login-screen .register-screen .register-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-login-screen .register-screen button{
+    background-color: #1a0020;
+    border: 1px solid #1d000d;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+}
+.register-login-screen .register-screen button:disabled {
+    background-color: grey;
+    color: black;
+}
+
+
+.register-login-screen .register-screen button:not(:disabled):hover{
+    background-color: white;
+    color: #1a0020;
+    transition: all .5s;
+}
+
+/* Giriş Yapma Ekranı */
+
+.register-login-screen .login-screen{
+    display: flex;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 75px;
+    padding-right: 75px ;
+    background-color: #1d000d;
+    border: 2px solid #38001a;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    border-radius: 30px;
+    display: none;
+}
+.register-login-screen .login-screen  p {
+    text-align: center;
+    font-size: 80px;
+    padding-bottom:50px;
+    font-weight: 900px;
+    text-decoration: underline;
+}
+.register-login-screen .login-screen .label-input-box{
+    padding-bottom: 30px;
+}
+.register-login-screen .login-screen label{
+    font-size: 20px;
+}
+.register-login-screen .login-screen .input-box{
+    display: flex;
+    border: 2px solid #1d000d;
+    background-color: #1a0020;
+    border-radius: 30px;
+    padding:10px;
+}
+.register-login-screen .login-screen input{
+    padding: 1px;
+    color: whitesmoke;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 20px;
+    outline: none;
+}
+.register-login-screen .login-screen .login-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register-login-screen .login-screen button{
+    background-color: #1a0020;
+    border: 1px solid #1d000d;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+}
+.register-login-screen .login-screen button:hover{
+    background-color: white;
+    color: #1a0020;
+    transition: all .5s;
+}
+
+.outside-kayit-basarili-p{
+    border: solid red;
+    width: 100px;
+    height: 40px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kayit-basarili-p{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a0020;
+    width: 100%;
+    height: 30px;
+    border-radius: 3px;
+    border: rgb(63, 63, 63);
+    display: none;
+}
+
+.kayit-basarili-p p{
+    text-align: center;
+    color: green;
+    text-decoration: underline;
+}

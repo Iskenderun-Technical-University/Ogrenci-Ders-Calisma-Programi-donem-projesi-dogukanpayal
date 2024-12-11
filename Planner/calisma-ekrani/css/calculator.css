@@ -1,0 +1,119 @@
+.calculator-outside-box{
+    width: 600px;
+    height: 240px;
+    margin: 20px;
+    display: flex;
+    padding-top: 130px;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-up-button-box{
+    border: 1px solid #360018;
+    background-color: #1d000d;
+    width: 350px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.calculator-up-button-box button{
+    border: transparent;
+    background-color: transparent;
+    color: white;
+    font-size: xx-large;
+    width: 100%;
+    height: 100%;
+}
+
+.calculator-down-button-box{
+    border: 1px solid #360018;
+    background-color: #1d000d;
+    width: 350px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    display: none;
+}
+
+.calculator-down-button-box button{
+    border: transparent;
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: xx-large;
+}
+
+.calculator-heading-box{
+    border: 1px solid #360018;
+    background-color: #1d000d;
+    width: 400px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+}
+
+
+.calculator-inside-box {
+    width: 320px;
+    height: 372px;
+    margin: 0 auto;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border: 3px solid #360018;
+    background-color: #1f0025ef;
+    position: absolute;
+    top: 500px;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.calculator-row-box{
+    margin-top: 10px;
+}
+
+.calculator-inside-box .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.calculator-inside-box .button {
+    width: 50px;
+    height: 50px;
+    background-color: #cecece;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+}
+.calculator-inside-box .button:hover {
+    background-color: #f2f2f2;
+}
+.calculator-inside-box .button:active {
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+}
+.calculator-inside-box .result {
+    height: 50px;
+    width: 100%;
+    background-color: #cecece;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    font-size: 24px;
+    text-align: right;
+    padding-right: 10px;
+    outline: none;
+}
